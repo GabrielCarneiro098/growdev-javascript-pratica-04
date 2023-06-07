@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa eletrônico</title>
+</head>
+<body>
+    <script>
+        
+         var nota1 = 0;
+         var nota5 = 0;
+         var nota10 = 0;
+         var nota50 = 0;
+         
+         var saque = prompt("Quanto deseja sacar?");
+         var valorInicial = saque;
+         
+         while (saque != 0) {
+            if(saque>=50.00) {
+                nota50++;
+                saque = saque - 50;
+            } else if (saque >= 10.00) {
+                nota10++;
+                saque = saque - 10;
+            } else if (saque >= 5) {
+                nota5++;
+                saque = saque - 5;
+            } else {
+                nota1++;
+                saque = saque - 1;
+            };
+        };
+        
+
+        document.write("O saque solicitado foi de: GC$" + valorInicial.toFixed(2) +"<br>" + " estamos imprimindo " + nota50 + " de GC$50" +"<br>" + nota10 + " de GC$10 " +"<br>" + nota5 + " de GC$5 " +"<br>" + nota1 + " de GC$1");
+            
+    </script>
+</body>
+</html>
